@@ -1,0 +1,23 @@
+{
+  "name": "forecast-fusion-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/forecast-fusion-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": ["{workspaceRoot}/dist/.playwright/apps/forecast-fusion-e2e"],
+      "options": {
+        "config": "apps/forecast-fusion-e2e/playwright.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/forecast-fusion-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "implicitDependencies": ["forecast-fusion"]
+}
