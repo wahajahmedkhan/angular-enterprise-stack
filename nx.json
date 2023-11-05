@@ -57,7 +57,8 @@
     "@nx/angular:component": {
       "style": "scss",
       "changeDetection": "OnPush",
-      "displayBlock": true
+      "displayBlock": true,
+      "standalone": true
     }
   },
   "nxCloudAccessToken": "Y2M1ZmUyOGQtODY2Yi00ZmRjLTkzMTktMTdiMzZiZmYyMDMwfHJlYWQtd3JpdGU="

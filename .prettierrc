@@ -1,3 +1,11 @@
 {
-  "singleQuote": true
+  "arrowParens": "avoid",
+  "bracketSpacing": true,
+  "plugins": [
+    "prettier-plugin-organize-imports"
+  ],
+  "proseWrap": "always",
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "all"
 }
