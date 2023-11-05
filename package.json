@@ -2,7 +2,11 @@
   "name": "@angular-enterprise-stack/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "serve-forecast-fusion-dev": "nx run forecast-fusion:serve:development",
+    "serve-forecast-fusion-prod": "nx run forecast-fusion:serve:production",
+    "build-forecast-fusion-prod": "nx run forecast-fusion:build:production"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.2.0",
