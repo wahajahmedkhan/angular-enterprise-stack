@@ -1,4 +1,3 @@
-
 module.exports = {
   root: true,
   ignorePatterns: ['**/*'],
@@ -6,7 +5,10 @@ module.exports = {
   overrides: [
     {
       files: ['*.html'],
-      extends: ['plugin:@angular-eslint/template/recommended', 'plugin:@nx/angular-template'],
+      extends: [
+        'plugin:@angular-eslint/template/recommended',
+        'plugin:@nx/angular-template',
+      ],
       plugins: ['@angular-eslint/template'],
       parser: '@angular-eslint/template-parser',
       rules: {
@@ -92,12 +94,36 @@ module.exports = {
             allow: [],
             depConstraints: [
               {
+                sourceTag: 'type:app',
+                onlyDependOnLibsWithTags: ['*'],
+              },
+              {
+                sourceTag: 'type:type',
+                onlyDependOnLibsWithTags: ['type:type'],
+              },
+              {
+                sourceTag: 'type:ui',
+                onlyDependOnLibsWithTags: ['type:ui', 'type:util', 'type:type'],
+              },
+              {
+                sourceTag: 'type:util',
+                onlyDependOnLibsWithTags: ['type:util', 'type:type'],
+              },
+              {
                 sourceTag: 'type:feat',
                 onlyDependOnLibsWithTags: [
                   'type:util',
                   'type:type',
                   'type:feat',
                   'type:ui',
+                  'type:data-access',
+                ],
+              },
+              {
+                sourceTag: 'type:data-access',
+                onlyDependOnLibsWithTags: [
+                  'type:util',
+                  'type:type',
                   'type:data-access',
                 ],
               },
@@ -114,7 +140,8 @@ module.exports = {
             paths: [
               {
                 name: 'axios',
-                message: "Using axios is not allowed. Use Angular's HttpClient instead",
+                message:
+                  "Using axios is not allowed. Use Angular's HttpClient instead",
               },
               {
                 name: 'rxjs/operators',
