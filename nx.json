@@ -43,14 +43,21 @@
       "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",
-      "e2eTestRunner": "playwright"
+      "e2eTestRunner": "playwright",
+      "strict": true
     },
     "@nx/angular:library": {
       "linter": "eslint",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "routing": true,
+      "lazy": true,
+      "strict": true,
+      "simpleName": true
     },
     "@nx/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "displayBlock": true
     }
   },
   "nxCloudAccessToken": "Y2M1ZmUyOGQtODY2Yi00ZmRjLTkzMTktMTdiMzZiZmYyMDMwfHJlYWQtd3JpdGU="
