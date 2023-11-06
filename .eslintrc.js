@@ -345,5 +345,12 @@ module.exports = {
       extends: ['plugin:@nx/javascript'],
       rules: {},
     },
+    {
+      files: ['*.json'],
+      parser: 'jsonc-eslint-parser',
+      rules: {
+        '@nx/dependency-checks': 'error',
+      },
+    },
   ],
 };
