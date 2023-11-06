@@ -58,10 +58,7 @@
       "style": "scss",
       "changeDetection": "OnPush",
       "displayBlock": true,
-      "standalone": true,
-      "_enabledBlockTypes": [
-        "if", "switch", "for"
-      ]
+      "standalone": true
     }
   },
   "nxCloudAccessToken": "Y2M1ZmUyOGQtODY2Yi00ZmRjLTkzMTktMTdiMzZiZmYyMDMwfHJlYWQtd3JpdGU="
