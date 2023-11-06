@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-enterprise-stack/forecast-fusion/data-access": [
+        "libs/forecast-fusion/data-access/src/index.ts"
+      ],
       "@angular-enterprise-stack/forecast-fusion/feat-shell": [
         "libs/forecast-fusion/feat-shell/src/index.ts"
       ],

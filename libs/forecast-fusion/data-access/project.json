@@ -1,0 +1,51 @@
+{
+  "name": "forecast-fusion-data-access",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/forecast-fusion/data-access/src",
+  "prefix": "ff",
+  "tags": ["scope:forecast-fusion\"", "\"type:data-access"],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/forecast-fusion/data-access/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/forecast-fusion/data-access/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/forecast-fusion/data-access/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/forecast-fusion/data-access/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/forecast-fusion/data-access/**/*.ts",
+          "libs/forecast-fusion/data-access/**/*.html",
+          "libs/forecast-fusion/data-access/package.json"
+        ]
+      }
+    }
+  }
+}
