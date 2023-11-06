@@ -24,6 +24,9 @@
       "@angular-enterprise-stack/forecast-fusion/feat-shell": [
         "libs/forecast-fusion/feat-shell/src/index.ts"
       ],
+      "@angular-enterprise-stack/shared/angular": [
+        "libs/shared/angular/src/index.ts"
+      ],
       "@angular-enterprise-stack/shared/ngrx": [
         "libs/shared/ngrx/src/index.ts"
       ],
