@@ -1,3 +1,4 @@
+import { debug } from '@angular-enterprise-stack/shared/ngrx';
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import {
   provideRouter,
@@ -12,7 +13,10 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(appRoutes, withEnabledBlockingInitialNavigation()),
     importProvidersFrom(
-      StoreModule.forRoot({ router: routerReducer }),
+      StoreModule.forRoot(
+        { router: routerReducer },
+        { metaReducers: [debug()] },
+      ),
       StoreRouterConnectingModule.forRoot(),
       EffectsModule.forRoot(),
     ),
