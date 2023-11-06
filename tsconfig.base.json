@@ -21,8 +21,8 @@
       "@angular-enterprise-stack/forecast-fusion/feat-shell": [
         "libs/forecast-fusion/feat-shell/src/index.ts"
       ],
-      "@angular-enterprise-stack/ui-design-system": [
-        "libs/ui-design-system/src/index.ts"
+      "@angular-enterprise-stack/shared/ui-design-system": [
+        "libs/shared/ui-design-system/src/index.ts"
       ]
     }
   },

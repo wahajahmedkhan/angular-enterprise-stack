@@ -1,5 +1,5 @@
 import { createActionGroup, props } from '@ngrx/store';
-import { ForecastStateModel } from './forecastStateReducer';
+import { ForecastStateModel } from './forecast.reducer';
 
 export const forecastActions = createActionGroup({
   source: 'Forecast',
