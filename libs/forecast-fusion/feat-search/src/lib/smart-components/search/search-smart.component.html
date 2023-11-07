@@ -5,12 +5,11 @@
   </h2>
   <div class="search-container">
     <input type="text" placeholder="Enter city" (keyup)='changeSearch($any($event.target).value)' [value]='searchReadOnly()'  />
+    <button id="search-button" (click)="fetchForecast()">Search</button>
     <ul *ngIf="searchReadOnly().length > 0 && !ifCityExactMatch()">
       <li *ngFor="let city of filterCities()"  (click)='changeSearch(city)'>
         {{ city }}
       </li>
     </ul>
   </div>
-
-  <button id="search-button" (click)="fetchForecast()">Search</button>
 </header>

@@ -23,21 +23,34 @@ h1 {
 }
 
 
-
 .search-container {
-  max-width: 300px;
+  display: flex;
+  max-width: 600px;
   margin: auto;
   position: relative;
   font-family: Arial, sans-serif;
 }
 
 .search-container input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  flex-grow: 1;
+  border-radius: 4px 0 0 4px; // Round only the left side
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
 }
+
+.search-container button {
+  border-radius: 0 4px 4px 0; // Round only the right side
+  margin-left: -1px; // Helps to connect the button to the input visually
+  background-color: #114556; // a vibrant color for the button
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #16596f; // slightly darker on hover
+}
+
 
 .search-container ul {
   list-style-type: none;
@@ -45,7 +58,9 @@ h1 {
   padding: 0;
   background-color: #fff;
   position: absolute;
-  width: 100%;
+  width: calc(100% - 100px); // Assuming the button is 100px wide, adjust as necessary
+  top: 100%; // Position it right below the input field
+  left: 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 0 0 4px 4px;
   z-index: 1000;
@@ -56,9 +71,10 @@ h1 {
 .search-container li {
   padding: 10px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
 }
 
 .search-container li:hover {
-  background-color: #f6f6f6;
+  background-color: #def; // a light blue for hover
+  color: #333; // change text color for better contrast if needed
 }

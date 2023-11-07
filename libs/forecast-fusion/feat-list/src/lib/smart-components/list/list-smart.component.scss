@@ -10,7 +10,9 @@ section {
   border-radius: 5px;
 }
 
-
+.controller {
+  text-align: center;
+}
 
 #sort-asc, #sort-desc {
   padding: 10px;
@@ -19,51 +21,52 @@ section {
   background-color: #444;
   color: #fff;
   margin: 5px;
+  text-align: center;
 }
 
 
-.forecast-container {
+.forecast-card-container {
   display: flex;
   overflow-x: auto;
   padding: 10px;
+  gap: 10px;
 }
 
-.card {
-  border: 1px solid #ccc;
+.forecast-card {
+  flex: 0 0 auto;
+  width: 200px;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 20px;
-  margin-right: 10px;
-  min-width: 200px;
-  background: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.card-icon {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 5px;
+  padding: 10px;
+  background-color: white;
   display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card-content p {
+.forecast-date, .forecast-temperature {
+  font-size: 1rem;
+  font-weight: bold;
   margin: 5px 0;
 }
 
-/* For the images/icons to fit well */
-.card-icon img {
+.weather-icon {
+  background-size: cover;
+  height: 50px;
   width: 50px;
-  height: auto;
+  margin: 5px 0;
 }
 
-/* Scrollbar styling */
-.forecast-container::-webkit-scrollbar {
-  height: 8px;
+.weather-details {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 5px 0;
 }
 
-.forecast-container::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
-}
-
-.forecast-container::-webkit-scrollbar-thumb:hover {
-  background: #555;
+.weather-description {
+  font-style: italic;
+  color: #555;
+  margin: 5px 0;
 }

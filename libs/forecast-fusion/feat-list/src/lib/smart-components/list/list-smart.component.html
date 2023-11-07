@@ -1,24 +1,38 @@
 <main>
   <section id="current-weather">
-    <!-- Current weather details will be populated here -->
-    <div class="forecast-container" >
-      <div class="card" *ngFor="let day  of forecastData()">
-        <h3>{{ day.datetime | date }}</h3>
-        <div class="card-icon">
-          <img [src]="'https://cdn.weatherbit.io/static/img/icons/'+day.weather.icon +'.png'" alt="{{ day.weather.description }}">
+    <div class="forecast-card-container">
+      <div class="forecast-card" *ngFor="let forecast of forecastData()">
+        <div class="forecast-date">{{ forecast.valid_date | date }}</div>
+        <div
+          class="weather-icon"
+          [ngStyle]="{
+            'background-image':
+              'url(https://cdn.weatherbit.io/static/img/icons/' +
+              forecast.weather.icon +
+              '.png)'
+          }"
+        ></div>
+        <div class="forecast-temperature">
+          {{ forecast.max_temp }}°C / {{ forecast.min_temp }}°C
         </div>
-        <div class="card-content">
-          <p><strong>Temp:</strong> {{ day.temp }}°C</p>
-          <p><strong>Max Temp:</strong> {{ day.app_max_temp }}°C</p>
-          <p><strong>Min Temp:</strong> {{ day.app_min_temp }}°C</p>
-          <p><strong>Wind:</strong> {{ day.wind_spd }} km/h {{ day.wind_cdir_full }}</p>
-          <p><strong>Precipitation:</strong> {{ day.precip }}%</p>
+        <div class="weather-description">
+          {{ forecast.weather.description }}
+        </div>
+        <div class="weather-details">
+          Wind: {{ forecast.wind_spd }} km/h {{ forecast.wind_cdir_full }}
+        </div>
+        <div class="weather-details">Humidity: {{ forecast.rh }}%</div>
+        <div class="weather-details">
+          Precipitation: {{ forecast.precip }} mm
         </div>
       </div>
     </div>
-
   </section>
-  <section id="forecast">
+  <section
+    id="forecast"
+    *ngIf="forecastStatus() === 'success'"
+    class="controller"
+  >
     <button id="sort-asc">Sort Asc</button>
     <button id="sort-desc">Sort Desc</button>
     <!-- 5-day forecast details will be populated here -->
