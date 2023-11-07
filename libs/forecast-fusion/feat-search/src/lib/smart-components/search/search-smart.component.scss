@@ -22,3 +22,43 @@ h1 {
   font-size: 2.5em;
 }
 
+
+
+.search-container {
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.search-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 4px 4px;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.search-container li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-container li:hover {
+  background-color: #f6f6f6;
+}

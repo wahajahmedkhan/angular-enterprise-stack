@@ -1,5 +1,16 @@
 <header>
   <h1>Forecast Fusion</h1>
-  <input type="text" id="location-input" placeholder="Enter City, Country">
-  <button id="search-button" (click)='testfn()'>Search</button>
+  <h2 *ngIf="forecastStatus() === 'success'">
+    Selected city: {{ selectedCity() }}
+  </h2>
+  <div class="search-container">
+    <input type="text" placeholder="Enter city" (keyup)='changeSearch($any($event.target).value)' [value]='searchReadOnly()'  />
+    <ul *ngIf="searchReadOnly().length > 0 && !ifCityExactMatch()">
+      <li *ngFor="let city of filterCities()"  (click)='changeSearch(city)'>
+        {{ city }}
+      </li>
+    </ul>
+  </div>
+
+  <button id="search-button" (click)="fetchForecast()">Search</button>
 </header>

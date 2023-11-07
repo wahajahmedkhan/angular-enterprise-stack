@@ -1,4 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
+import { europeanCities, usCities } from './constant';
 import { forecastActions } from './forecast.actions';
 import { ForecastApiResult } from './forecast.types';
 
@@ -8,6 +9,7 @@ export interface ForecastStateModel {
   status: 'idle' | 'pending' | 'success' | 'error';
   data: ForecastApiResult;
   error: string;
+  countries: Array<string>;
 }
 
 export const initialForecastState: ForecastStateModel = {
@@ -18,6 +20,7 @@ export const initialForecastState: ForecastStateModel = {
     data: [],
   },
   error: '',
+  countries: [...usCities, ...europeanCities].sort(),
 };
 
 export const forecastStateReducer = createReducer<ForecastStateModel>(
