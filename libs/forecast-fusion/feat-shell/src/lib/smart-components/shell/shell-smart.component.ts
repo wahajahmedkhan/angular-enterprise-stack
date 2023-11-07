@@ -5,8 +5,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'ff-shell',
   standalone: true,
   imports: [SearchSmartComponent],
-  templateUrl: './shell.smart-component.html',
-  styleUrls: ['./shell.smart-component.scss'],
+  templateUrl: './shell-smart.component.html',
+  styleUrls: ['./shell-smart.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShellSmartComponent {}

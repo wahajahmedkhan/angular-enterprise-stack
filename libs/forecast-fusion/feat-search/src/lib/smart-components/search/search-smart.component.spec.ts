@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SearchSmartComponent } from './search.smart-component';
+import { SearchSmartComponent } from './search-smart.component';
 
 describe('FeatSearchComponent', () => {
   let component: SearchSmartComponent;

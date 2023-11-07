@@ -1,1 +1,1 @@
-export * from './lib/smart-components/search/search.smart-component';
+export * from './lib/smart-components/search/search-smart.component';

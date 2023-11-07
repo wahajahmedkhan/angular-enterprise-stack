@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ShellSmartComponent } from './shell.smart-component';
+import { ShellSmartComponent } from './shell-smart.component';
 
 describe('ShellComponent', () => {
   let component: ShellSmartComponent;

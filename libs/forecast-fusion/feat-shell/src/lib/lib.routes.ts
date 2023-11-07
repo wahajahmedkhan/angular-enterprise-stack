@@ -10,7 +10,7 @@ import { importProvidersFrom } from '@angular/core';
 import { Route } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { ShellSmartComponent } from './smart-components/shell/shell.smart-component';
+import { ShellSmartComponent } from './smart-components/shell/shell-smart.component';
 
 export const ffFeatShellRoutes: Route[] = [
   {
