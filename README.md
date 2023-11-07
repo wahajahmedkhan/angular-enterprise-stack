@@ -9,13 +9,16 @@ AngularEnterpriseStack is an enterprise-level mono repo architecture utilizing N
 - **Mono Repo Architecture:** Utilizing Nx to manage multiple apps and libraries in a single repository.
 - **State Management:** Efficient state management with Ngrx.
 - **Component Architecture:** Angular standalone components and signals for a decoupled, maintainable codebase.
-- **Testing:** Comprehensive testing setup with Jest for unit testing and Playwright for e2e testing.
 - **Shared Libraries:** Reusable libraries for UI components, Authentication, and common utilities.
-- **Continuous Integration:** Ready for CI/CD pipelines to ensure consistent quality and deployability.
+
+
+[//]: # (- **Testing:** Comprehensive testing setup with Jest for unit testing and Playwright for e2e testing.)
+
+[//]: # (- **Continuous Integration:** Ready for CI/CD pipelines to ensure consistent quality and deployability.)
 
 ## Getting Started
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/angular-enterprise-stack.git
+   git clone https://github.com/wahajahmedkhan/angular-enterprise-stack.git
    cd angular-enterprise-stack
