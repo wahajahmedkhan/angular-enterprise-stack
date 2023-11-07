@@ -12,6 +12,8 @@ export const selectForecastData = createSelector(
   selectFeature,
   s => s.data.data,
 );
+
+export const selectForecastError = createSelector(selectFeature, s => s.error);
 export const selectForecastCurrentCity = createSelector(
   selectFeature,
   s => s.data.city_name,

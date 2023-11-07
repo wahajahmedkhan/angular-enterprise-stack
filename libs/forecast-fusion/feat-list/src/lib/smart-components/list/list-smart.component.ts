@@ -1,5 +1,7 @@
 import {
+  selectForecastCurrentCity,
   selectForecastData,
+  selectForecastError,
   selectForecastStatus,
 } from '@angular-enterprise-stack/forecast-fusion/data-access';
 import { DatePipe, NgForOf, NgIf, NgStyle } from '@angular/common';
@@ -18,8 +20,16 @@ import { Store } from '@ngrx/store';
 export class ListSmartComponent {
   private readonly store = inject(Store);
 
+  public readonly selectedCity = toSignal(
+    this.store.select(selectForecastCurrentCity),
+  );
+
   public readonly forecastStatus = toSignal(
     this.store.select(selectForecastStatus),
+  );
+
+  public readonly forecastError = toSignal(
+    this.store.select(selectForecastError),
   );
   public readonly forecastData = toSignal(
     this.store.select(selectForecastData),

@@ -1,40 +1,46 @@
 <main>
-  <section id="current-weather">
-    <div class="forecast-card-container">
-      <div class="forecast-card" *ngFor="let forecast of forecastData()">
-        <div class="forecast-date">{{ forecast.valid_date | date }}</div>
-        <div
-          class="weather-icon"
-          [ngStyle]="{
-            'background-image':
-              'url(https://cdn.weatherbit.io/static/img/icons/' +
-              forecast.weather.icon +
-              '.png)'
-          }"
-        ></div>
-        <div class="forecast-temperature">
-          {{ forecast.max_temp }}°C / {{ forecast.min_temp }}°C
-        </div>
-        <div class="weather-description">
-          {{ forecast.weather.description }}
-        </div>
-        <div class="weather-details">
-          Wind: {{ forecast.wind_spd }} km/h {{ forecast.wind_cdir_full }}
-        </div>
-        <div class="weather-details">Humidity: {{ forecast.rh }}%</div>
-        <div class="weather-details">
-          Precipitation: {{ forecast.precip }} mm
+  <ng-container *ngIf="forecastStatus() === 'success'">
+    <h2>{{ selectedCity() }}</h2>
+    <section id="current-weather">
+      <div class="forecast-card-container">
+        <div class="forecast-card" *ngFor="let forecast of forecastData()">
+          <div class="forecast-date">{{ forecast.valid_date | date }}</div>
+          <div
+            class="weather-icon"
+            [ngStyle]="{
+              'background-image':
+                'url(https://cdn.weatherbit.io/static/img/icons/' +
+                forecast.weather.icon +
+                '.png)'
+            }"
+          ></div>
+          <div class="forecast-temperature">
+            {{ forecast.max_temp }}°C / {{ forecast.min_temp }}°C
+          </div>
+          <div class="weather-description">
+            {{ forecast.weather.description }}
+          </div>
+          <div class="weather-details">
+            Wind: {{ forecast.wind_spd }} km/h {{ forecast.wind_cdir_full }}
+          </div>
+          <div class="weather-details">Humidity: {{ forecast.rh }}%</div>
+          <div class="weather-details">
+            Precipitation: {{ forecast.precip }} mm
+          </div>
         </div>
       </div>
+    </section>
+    <section id="forecast" class="controller">
+      <button id="sort-asc">Sort Asc</button>
+      <button id="sort-desc">Sort Desc</button>
+      <!-- 5-day forecast details will be populated here -->
+    </section>
+  </ng-container>
+
+  <ng-container *ngIf="forecastStatus() === 'error'">
+    <div class="error-container">
+      <h2>Oops!</h2>
+      <p>{{forecastError()}}</p>
     </div>
-  </section>
-  <section
-    id="forecast"
-    *ngIf="forecastStatus() === 'success'"
-    class="controller"
-  >
-    <button id="sort-asc">Sort Asc</button>
-    <button id="sort-desc">Sort Desc</button>
-    <!-- 5-day forecast details will be populated here -->
-  </section>
+  </ng-container>
 </main>

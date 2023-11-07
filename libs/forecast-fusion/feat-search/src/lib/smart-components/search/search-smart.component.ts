@@ -1,8 +1,6 @@
 import {
   forecastActions,
   selectAllCities,
-  selectForecastCurrentCity,
-  selectForecastStatus,
 } from '@angular-enterprise-stack/forecast-fusion/data-access';
 import { NgForOf, NgIf } from '@angular/common';
 import {
@@ -25,12 +23,6 @@ import { Store } from '@ngrx/store';
 })
 export class SearchSmartComponent {
   private readonly store = inject(Store);
-  public readonly selectedCity = toSignal(
-    this.store.select(selectForecastCurrentCity),
-  );
-  public readonly forecastStatus = toSignal(
-    this.store.select(selectForecastStatus),
-  );
 
   public readonly allCities = toSignal(this.store.select(selectAllCities), {
     initialValue: [],
@@ -53,7 +45,17 @@ export class SearchSmartComponent {
   );
 
   public fetchForecast(): void {
-    this.store.dispatch(forecastActions.fetchForecast({ city: this.search() }));
+    if (this.ifCityExactMatch()) {
+      this.store.dispatch(
+        forecastActions.fetchForecast({ city: this.search() }),
+      );
+    } else {
+      this.store.dispatch(
+        forecastActions.fetchForecastError({
+          error: 'Invalid Parameters supplied.',
+        }),
+      );
+    }
   }
 
   changeSearch(value: string) {

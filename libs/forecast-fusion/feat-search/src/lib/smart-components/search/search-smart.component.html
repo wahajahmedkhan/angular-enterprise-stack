@@ -1,8 +1,6 @@
 <header>
   <h1>Forecast Fusion</h1>
-  <h2 *ngIf="forecastStatus() === 'success'">
-    Selected city: {{ selectedCity() }}
-  </h2>
+
   <div class="search-container">
     <input type="text" placeholder="Enter city" (keyup)='changeSearch($any($event.target).value)' [value]='searchReadOnly()'  />
     <button id="search-button" (click)="fetchForecast()">Search</button>
