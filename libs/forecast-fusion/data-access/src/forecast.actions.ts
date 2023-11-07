@@ -1,11 +1,11 @@
 import { createActionGroup, props } from '@ngrx/store';
-import { ForecastStateModel } from './forecast.reducer';
+import { ForecastApiResult } from './forecast.types';
 
 export const forecastActions = createActionGroup({
   source: 'Forecast',
   events: {
-    fetchForecast: props<{city_name: string, country_code: string}>(),
-    fetchForecastSuccess: props<ForecastStateModel>(),
+    fetchForecast: props<{ city: string }>(),
+    fetchForecastSuccess: props<ForecastApiResult>(),
     fetchForecastError: props<{ error: string }>(),
-  }
+  },
 });
