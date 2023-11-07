@@ -1,5 +1,4 @@
 
-
 main {
   padding: 20px;
 }
@@ -22,3 +21,49 @@ section {
   margin: 5px;
 }
 
+
+.forecast-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-right: 10px;
+  min-width: 200px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  margin: 5px 0;
+}
+
+/* For the images/icons to fit well */
+.card-icon img {
+  width: 50px;
+  height: auto;
+}
+
+/* Scrollbar styling */
+.forecast-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.forecast-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.forecast-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
