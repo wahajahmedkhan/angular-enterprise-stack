@@ -48,3 +48,5 @@ export interface ForecastApiResult {
   country_code: string;
   data: Array<ForecastData>;
 }
+
+export type SortType = 'asc' | 'desc';

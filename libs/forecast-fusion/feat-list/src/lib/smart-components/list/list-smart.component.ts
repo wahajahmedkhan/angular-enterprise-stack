@@ -1,8 +1,10 @@
 import {
+  forecastActions,
   selectForecastCurrentCity,
   selectForecastData,
   selectForecastError,
   selectForecastStatus,
+  SortType,
 } from '@angular-enterprise-stack/forecast-fusion/data-access';
 import { DatePipe, NgForOf, NgIf, NgStyle } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
@@ -35,4 +37,8 @@ export class ListSmartComponent {
     this.store.select(selectForecastData),
     { initialValue: [] },
   );
+
+  sortList(value: SortType) {
+    this.store.dispatch(forecastActions.sortForecastData({ sortType: value }));
+  }
 }

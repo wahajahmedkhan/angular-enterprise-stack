@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 import { europeanCities, usCities } from './constant';
 import { forecastActions } from './forecast.actions';
-import { ForecastApiResult } from './forecast.types';
+import { ForecastApiResult, ForecastData, SortType } from './forecast.types';
 
 export const FORECAST_STATE_KEY = 'forecastState';
 
@@ -39,4 +39,21 @@ export const forecastStateReducer = createReducer<ForecastStateModel>(
     status: 'error',
     error,
   })),
+  on(forecastActions.sortForecastData, (state, { sortType }) => ({
+    ...state,
+    data: {
+      ...state.data,
+      data: dateSorter([...state.data.data], sortType),
+    },
+  })),
 );
+
+function dateSorter(arr: Array<ForecastData>, sortType: SortType) {
+  return arr.sort((a, b) => {
+    if (sortType === 'asc') {
+      return new Date(a.valid_date) > new Date(b.valid_date) ? 0 : -1;
+    } else {
+      return new Date(a.valid_date) < new Date(b.valid_date) ? 0 : -1;
+    }
+  });
+}

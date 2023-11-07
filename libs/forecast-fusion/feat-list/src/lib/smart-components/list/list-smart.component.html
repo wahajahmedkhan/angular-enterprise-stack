@@ -31,8 +31,8 @@
       </div>
     </section>
     <section id="forecast" class="controller">
-      <button id="sort-asc">Sort Asc</button>
-      <button id="sort-desc">Sort Desc</button>
+      <button id="sort-asc" (click)="sortList('asc')">Sort Asc</button>
+      <button id="sort-desc" (click)="sortList('desc')">Sort Desc</button>
       <!-- 5-day forecast details will be populated here -->
     </section>
   </ng-container>
@@ -40,7 +40,7 @@
   <ng-container *ngIf="forecastStatus() === 'error'">
     <div class="error-container">
       <h2>Oops!</h2>
-      <p>{{forecastError()}}</p>
+      <p>{{ forecastError() }}</p>
     </div>
   </ng-container>
 </main>
