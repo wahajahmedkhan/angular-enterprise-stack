@@ -1,1 +1,1 @@
-export * from './lib/user-card-component/user-card-component.component';
+export * from './lib/user-card/user-card.component';
