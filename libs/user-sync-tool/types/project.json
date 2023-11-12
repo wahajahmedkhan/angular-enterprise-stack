@@ -3,7 +3,7 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/user-sync-tool/types/src",
   "prefix": "ust",
-  "tags": [],
+  "tags": ["scope:user-sync-tool", "type:types"],
   "projectType": "library",
   "targets": {
     "build": {
