@@ -1,0 +1,51 @@
+{
+  "name": "user-sync-tool-feat-favourite",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/user-sync-tool/feat-favourite/src",
+  "prefix": "ust",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/user-sync-tool/feat-favourite/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/user-sync-tool/feat-favourite/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/user-sync-tool/feat-favourite/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/user-sync-tool/feat-favourite/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/user-sync-tool/feat-favourite/**/*.ts",
+          "libs/user-sync-tool/feat-favourite/**/*.html",
+          "libs/user-sync-tool/feat-favourite/package.json"
+        ]
+      }
+    }
+  }
+}
