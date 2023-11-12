@@ -35,6 +35,24 @@
       ],
       "@angular-enterprise-stack/shared/ui-design-system": [
         "libs/shared/ui-design-system/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/data-access": [
+        "libs/user-sync-tool/data-access/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/feat-favourite": [
+        "libs/user-sync-tool/feat-favourite/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/feat-random-users": [
+        "libs/user-sync-tool/feat-random-users/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/feat-shell": [
+        "libs/user-sync-tool/feat-shell/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/types": [
+        "libs/user-sync-tool/types/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/ui": [
+        "libs/user-sync-tool/ui/src/index.ts"
       ]
     }
   },
