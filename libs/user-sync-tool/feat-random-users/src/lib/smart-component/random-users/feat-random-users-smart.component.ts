@@ -1,8 +1,13 @@
-import { userSelectors } from '@angular-enterprise-stack/user-sync-tool/data-access';
+import { trackById } from '@angular-enterprise-stack/shared/angular';
+import {
+  userActions,
+  userSelectors,
+} from '@angular-enterprise-stack/user-sync-tool/data-access';
 import { IUser } from '@angular-enterprise-stack/user-sync-tool/types';
 import {
   ToggleSwitchComponent,
   UserCardComponent,
+  listAnimation,
 } from '@angular-enterprise-stack/user-sync-tool/ui';
 import { NgForOf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
@@ -15,6 +20,7 @@ import { Store } from '@ngrx/store';
   imports: [ToggleSwitchComponent, NgForOf, UserCardComponent],
   templateUrl: './feat-random-users-smart.component.html',
   styleUrls: ['./feat-random-users-smart.component.scss'],
+  animations: [listAnimation],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FeatRandomUsersSmartComponent {
@@ -26,24 +32,26 @@ export class FeatRandomUsersSmartComponent {
     this.store.select(userSelectors.selectFavouriteUser),
     { initialValue: [] },
   );
-  intervalId: any;
+
+  private intervalId: any;
+
+  readonly trackById = trackById;
 
   toggleTimer(isActive: boolean) {
     if (isActive) {
       this.intervalId = setInterval(() => {
         this.fetchNewUser();
-      }, 5000);
+      }, 4000);
     } else {
       clearInterval(this.intervalId);
     }
   }
 
   fetchNewUser() {
-    // Fetch a new user and update the list
-    // Add a new user
+    this.store.dispatch(userActions.fetchUserListAndAddRandomUser());
   }
 
   addToFavourites(user: IUser): void {
-    // Add user to favourites, ensuring the limit is respected
+    this.store.dispatch(userActions.addUserToFavouriteList(user));
   }
 }
