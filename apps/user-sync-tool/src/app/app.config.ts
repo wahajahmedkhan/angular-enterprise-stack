@@ -1,6 +1,7 @@
 import { debug } from '@angular-enterprise-stack/shared/ngrx';
 import { provideHttpClient } from '@angular/common/http';
 import { ApplicationConfig } from '@angular/core';
+import { provideAnimations } from '@angular/platform-browser/animations';
 import {
   provideRouter,
   withEnabledBlockingInitialNavigation,
@@ -15,5 +16,6 @@ export const appConfig: ApplicationConfig = {
     provideStore({ router: routerReducer }, { metaReducers: [debug()] }),
     provideRouterStore(),
     provideHttpClient(),
+    provideAnimations(),
   ],
 };
