@@ -21,3 +21,17 @@ button {
     background-color: #005f73;
   }
 }
+
+
+.centered-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin: 20px 0 0 0;
+}
+
+.centered-toggle h3 {
+  margin: 0; /* Removes default margin to help with centering */
+}

@@ -1,4 +1,6 @@
-<ust-toggle-switch-component> (toggleChange)="toggleTimer($event)"></ust-toggle-switch-component>
+<div class="centered-toggle">
+  <h3>Enable random user Fetching</h3><ust-toggle-switch-component> (toggleChange)="toggleTimer($event)"></ust-toggle-switch-component>
+</div>
 <div class="user-list-container">
   <div *ngFor="let user of users()">
     <ust-user-card [user]="user">
