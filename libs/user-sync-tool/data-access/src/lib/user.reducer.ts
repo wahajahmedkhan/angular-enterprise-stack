@@ -18,10 +18,10 @@ export const userStateReducer = createReducer<IUserStateModel>(
     ...state,
     status: 'pending',
   })),
-  on(userActions.fetchUserListSuccess, (state, data) => ({
+  on(userActions.fetchUserListSuccess, (state, { data }) => ({
     ...state,
     status: 'success',
-    data: data.data,
+    data: data,
   })),
   on(userActions.fetchUserListError, (state, { error }) => ({
     ...state,
