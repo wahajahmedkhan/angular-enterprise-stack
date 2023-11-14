@@ -1,0 +1,23 @@
+.user-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: #008cba;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #005f73;
+  }
+}

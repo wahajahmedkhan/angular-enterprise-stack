@@ -1,1 +1,9 @@
-<p>feat-random-users works!</p>
+<ust-toggle-switch-component> (toggleChange)="toggleTimer($event)"></ust-toggle-switch-component>
+<div class="user-list-container">
+  <div *ngFor="let user of users()">
+    <ust-user-card [user]="user">
+      <!-- Projected content for adding to favourites -->
+      <button (click)="addToFavourites(user)">Add to Favourites</button>
+    </ust-user-card>
+  </div>
+</div>
