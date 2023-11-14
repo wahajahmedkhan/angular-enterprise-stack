@@ -13,6 +13,8 @@ export const userActions = createActionGroup({
     'fetch user list error': props<{ error: string }>(),
     'fetch user list and add random user': emptyProps(),
     'fetch user list and add random user success': props<IResponseListUser>(),
+    'remove first user from the list': emptyProps(),
+    'add new random user': props<IUser>(),
     'fetch user list and add random user error': props<{
       error: string | ErrorMessages;
     }>(),

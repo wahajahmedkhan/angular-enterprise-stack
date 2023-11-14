@@ -1,6 +1,5 @@
 import { IUserStateModel } from '@angular-enterprise-stack/user-sync-tool/types';
 import { createReducer, on } from '@ngrx/store';
-import { addRandomUser } from './add-random-user';
 import { userActions } from './user.actions';
 
 export const USER_STATE_KEY = 'userState';
@@ -28,9 +27,13 @@ export const userStateReducer = createReducer<IUserStateModel>(
     status: 'error',
     error,
   })),
-  on(userActions.fetchUserListAndAddRandomUserSuccess, (state, { data }) => ({
+  on(userActions.addNewRandomUser, (state, user) => ({
     ...state,
-    data: addRandomUser(state.data, data),
+    data: [...state.data, user],
+  })),
+  on(userActions.removeFirstUserFromTheList, state => ({
+    ...state,
+    data: [...state.data].filter((_value, ind) => ind !== 0),
   })),
   on(userActions.fetchUserListAndAddRandomUserError, (state, { error }) => ({
     ...state,
