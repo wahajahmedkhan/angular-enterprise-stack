@@ -28,18 +28,19 @@
   display: flex;
 
   .nav-btn {
+    text-decoration: none;
     padding: 8px 16px;
     margin-left: 10px;
     border: none;
     border-radius: 4px;
-    background-color: #ff5722; /* Material Design Accent Color */
+    background-color: #008cba; /* Material Design Accent Color */
     color: white;
     font-weight: medium;
     cursor: pointer;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #e64a19; /* Darker shade on hover */
+      background-color: #005f73; /* Darker shade on hover */
     }
   }
 }

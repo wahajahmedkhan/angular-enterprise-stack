@@ -4,7 +4,8 @@
     <span class="app-name">UserSyncTool</span>
   </div>
   <div class="navigation-buttons">
-    <button class="nav-btn">Button 1</button>
-    <button class="nav-btn">Button 2</button>
+    <ng-container *ngFor="let route of routes">
+      <a [routerLink]="'/'+route" class="nav-btn" >{{route}}</a>
+    </ng-container>
   </div>
 </div>
