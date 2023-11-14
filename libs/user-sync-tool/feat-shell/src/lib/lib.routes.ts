@@ -17,8 +17,24 @@ export const ustFeatShellRoutes: Route[] = [
     providers: [
       UserService,
       UserReqresService,
-      provideState(USER_STATE_KEY, [userStateReducer]),
+      provideState(USER_STATE_KEY, userStateReducer),
       provideEffects([UserEffects]),
+    ],
+    children: [
+      {
+        path: '',
+        loadComponent: () =>
+          import(
+            '@angular-enterprise-stack/user-sync-tool/feat-random-users'
+          ).then(c => c.FeatRandomUsersSmartComponent),
+      },
+      {
+        path: 'favourite',
+        loadComponent: () =>
+          import(
+            '@angular-enterprise-stack/user-sync-tool/feat-favourite'
+          ).then(c => c.FavouriteSmartComponent),
+      },
     ],
   },
 ];

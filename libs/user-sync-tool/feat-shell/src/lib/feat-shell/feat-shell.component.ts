@@ -1,3 +1,4 @@
+import { ToolbarComponent } from '@angular-enterprise-stack/user-sync-tool/ui';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -7,6 +8,6 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './feat-shell.component.html',
   styleUrls: ['./feat-shell.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ToolbarComponent],
 })
 export class FeatShellComponent {}
