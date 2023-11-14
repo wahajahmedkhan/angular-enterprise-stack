@@ -22,18 +22,22 @@ export const ustFeatShellRoutes: Route[] = [
     ],
     children: [
       {
-        path: '',
+        path: 'Home',
         loadComponent: () =>
           import(
             '@angular-enterprise-stack/user-sync-tool/feat-random-users'
           ).then(c => c.FeatRandomUsersSmartComponent),
       },
       {
-        path: 'favourite',
+        path: 'Favourite',
         loadComponent: () =>
           import(
             '@angular-enterprise-stack/user-sync-tool/feat-favourite'
           ).then(c => c.FavouriteSmartComponent),
+      },
+      {
+        path: '**',
+        redirectTo: 'Home',
       },
     ],
   },
