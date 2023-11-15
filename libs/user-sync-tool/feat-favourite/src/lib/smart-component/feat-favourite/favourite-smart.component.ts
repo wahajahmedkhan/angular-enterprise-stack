@@ -7,7 +7,7 @@ import {
   UserCardComponent,
   listAnimation,
 } from '@angular-enterprise-stack/user-sync-tool/ui';
-import { NgForOf } from '@angular/common';
+import { NgForOf, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Store } from '@ngrx/store';
@@ -15,7 +15,7 @@ import { Store } from '@ngrx/store';
 @Component({
   selector: 'ust-favourite',
   standalone: true,
-  imports: [UserCardComponent, NgForOf],
+  imports: [UserCardComponent, NgForOf, NgIf],
   animations: [listAnimation('100ms')],
   templateUrl: './favourite-smart.component.html',
   styleUrls: ['./favourite-smart.component.scss'],
