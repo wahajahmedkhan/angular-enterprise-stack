@@ -16,7 +16,7 @@ import { Store } from '@ngrx/store';
   selector: 'ust-favourite',
   standalone: true,
   imports: [UserCardComponent, NgForOf],
-  animations: [listAnimation],
+  animations: [listAnimation('100ms')],
   templateUrl: './favourite-smart.component.html',
   styleUrls: ['./favourite-smart.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

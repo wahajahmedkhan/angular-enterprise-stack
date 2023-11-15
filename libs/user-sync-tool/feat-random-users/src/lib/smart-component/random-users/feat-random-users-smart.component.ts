@@ -20,7 +20,7 @@ import { Store } from '@ngrx/store';
   imports: [ToggleSwitchComponent, NgForOf, UserCardComponent],
   templateUrl: './feat-random-users-smart.component.html',
   styleUrls: ['./feat-random-users-smart.component.scss'],
-  animations: [listAnimation],
+  animations: [listAnimation('600ms')],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FeatRandomUsersSmartComponent {
