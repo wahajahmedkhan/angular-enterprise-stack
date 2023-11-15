@@ -1,4 +1,5 @@
 import {
+  ToasterService,
   USER_STATE_KEY,
   UserEffects,
   UserReqresService,
@@ -15,6 +16,7 @@ export const ustFeatShellRoutes: Route[] = [
     path: '',
     component: FeatShellComponent,
     providers: [
+      ToasterService,
       UserService,
       UserReqresService,
       provideState(USER_STATE_KEY, userStateReducer),
