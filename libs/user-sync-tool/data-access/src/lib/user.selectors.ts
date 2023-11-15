@@ -1,6 +1,6 @@
-import { USER_STATE_KEY } from '@angular-enterprise-stack/user-sync-tool/data-access';
 import { IUserStateModel } from '@angular-enterprise-stack/user-sync-tool/types';
 import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { USER_STATE_KEY } from './user.reducer';
 
 export const selectFeature =
   createFeatureSelector<IUserStateModel>(USER_STATE_KEY);
