@@ -1,7 +1,6 @@
 import {
   animate,
   query,
-  stagger,
   style,
   transition,
   trigger,
@@ -13,13 +12,10 @@ export const listAnimation = (duration = '600ms') =>
       query(
         ':enter',
         [
-          style({ opacity: 0, transform: 'translateX(-15px)' }),
-          stagger(
-            '0ms',
-            animate(
-              `${duration} ease-out`,
-              style({ opacity: 1, transform: 'translateX(0px)' }),
-            ),
+          style({ opacity: 0, transform: 'translateX(30px)' }),
+          animate(
+            `${duration} ease-out`,
+            style({ opacity: 1, transform: 'translateX(0px)' }),
           ),
         ],
         { optional: true },
@@ -29,7 +25,7 @@ export const listAnimation = (duration = '600ms') =>
         [
           animate(
             `${duration} ease-in`,
-            style({ opacity: 0, transform: 'translateX(15px)' }),
+            style({ opacity: 0, transform: 'translateX(-30px)' }),
           ),
         ],
         { optional: true },
