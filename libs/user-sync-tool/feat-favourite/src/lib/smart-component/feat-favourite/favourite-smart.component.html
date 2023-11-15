@@ -1,1 +1,8 @@
-<p>feat-favourite works!</p>
+<div class="user-list-container" [@listAnimation]="favourite().length">
+  <div *ngFor="let user of favourite(); trackBy: trackById">
+    <ust-user-card [user]="user">
+      <!-- Projected content for adding to favourites -->
+      <button (click)="removeFromFavourites(user.id)">Remove</button>
+    </ust-user-card>
+  </div>
+</div>
