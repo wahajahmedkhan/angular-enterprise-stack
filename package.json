@@ -5,7 +5,10 @@
   "scripts": {
     "serve-forecast-fusion-dev": "nx run forecast-fusion:serve:development",
     "serve-forecast-fusion-prod": "nx run forecast-fusion:serve:production",
-    "build-forecast-fusion-prod": "nx run forecast-fusion:build:production"
+    "build-forecast-fusion-prod": "nx run forecast-fusion:build:production",
+    "serve-user-sync-tool-dev": "nx run user-sync-tool:serve:development",
+    "serve-user-sync-tool-prod": "nx run user-sync-tool:serve:production",
+    "build-user-sync-tool-prod": "nx run user-sync-tool:build:production"
   },
   "private": true,
   "dependencies": {
