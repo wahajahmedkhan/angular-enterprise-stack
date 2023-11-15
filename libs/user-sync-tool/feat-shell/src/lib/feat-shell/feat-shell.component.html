@@ -1,4 +1,5 @@
 <ust-toolbar [routes]="routes()"></ust-toolbar>
-<router-outlet></router-outlet>
-
+<div [@routeAnimations]="o.isActivated ? o.activatedRoute : ''">
+  <router-outlet #o="outlet"></router-outlet>
+</div>
 

@@ -1,5 +1,8 @@
 import { routerSelectors } from '@angular-enterprise-stack/shared/ngrx';
-import { ToolbarComponent } from '@angular-enterprise-stack/user-sync-tool/ui';
+import {
+  slideInAnimation,
+  ToolbarComponent,
+} from '@angular-enterprise-stack/user-sync-tool/ui';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -17,6 +20,7 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./feat-shell.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet, ToolbarComponent],
+  animations: [slideInAnimation],
 })
 export class FeatShellComponent {
   private readonly store = inject(Store);
