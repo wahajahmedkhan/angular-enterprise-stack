@@ -43,4 +43,8 @@ export const userStateReducer = createReducer<IUserStateModel>(
     ...state,
     favourite: [...state.favourite, user],
   })),
+  on(userActions.removeUserFromFavouriteList, (state, { id }) => ({
+    ...state,
+    favourite: [...state.favourite].filter(user => user.id !== id),
+  })),
 );
