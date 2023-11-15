@@ -48,7 +48,7 @@
     "@nx/eslint-plugin": "17.0.3",
     "@nx/jest": "17.0.3",
     "@nx/js": "17.0.3",
-    "@nx/playwright": "17.0.3",
+    "@nx/playwright": "^17.0.3",
     "@nx/workspace": "17.0.3",
     "@playwright/test": "^1.36.0",
     "@schematics/angular": "~16.2.0",
