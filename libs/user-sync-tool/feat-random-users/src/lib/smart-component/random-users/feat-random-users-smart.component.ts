@@ -28,10 +28,6 @@ export class FeatRandomUsersSmartComponent {
   readonly users = toSignal(this.store.select(userSelectors.selectUserList), {
     initialValue: [],
   });
-  readonly favourite = toSignal(
-    this.store.select(userSelectors.selectFavouriteUser),
-    { initialValue: [] },
-  );
 
   private intervalId: any;
 
