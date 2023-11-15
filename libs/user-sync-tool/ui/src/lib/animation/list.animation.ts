@@ -14,9 +14,9 @@ export const listAnimation = trigger('listAnimation', [
       [
         style({ opacity: 0, transform: 'translateX(-15px)' }),
         stagger(
-          '100ms',
+          '0ms',
           animate(
-            '300ms ease-out',
+            '600ms ease-out',
             style({ opacity: 1, transform: 'translateX(0px)' }),
           ),
         ),
@@ -27,7 +27,7 @@ export const listAnimation = trigger('listAnimation', [
       ':leave',
       [
         animate(
-          '300ms ease-in',
+          '600ms ease-in',
           style({ opacity: 0, transform: 'translateX(15px)' }),
         ),
       ],
