@@ -31,14 +31,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/shared/ui-design-system/**/*.ts",
-          "libs/shared/ui-design-system/**/*.html",
-          "libs/shared/ui-design-system/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     }
   }
 }

@@ -31,14 +31,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/user-sync-tool/feat-favourite/**/*.ts",
-          "libs/user-sync-tool/feat-favourite/**/*.html",
-          "libs/user-sync-tool/feat-favourite/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     }
   }
 }

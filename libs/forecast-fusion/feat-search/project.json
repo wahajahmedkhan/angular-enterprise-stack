@@ -31,14 +31,7 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/forecast-fusion/feat-search/**/*.ts",
-          "libs/forecast-fusion/feat-search/**/*.html",
-          "libs/forecast-fusion/feat-search/package.json"
-        ]
-      }
+      "outputs": ["{options.outputFile}"]
     }
   }
 }
