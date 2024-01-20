@@ -1,7 +1,11 @@
 <div class="user-card" *ngIf="user">
   <div class="user-image">
-    <img [src]="user.avatar" [alt]="user.first_name + ' ' + user.last_name" (load)="imageLoaded = true" >
-    <ng-template *ngIf="!imageLoaded" >
+    <img
+      [src]="user.avatar"
+      [alt]="user.first_name + ' ' + user.last_name"
+      (load)="imageLoaded = true"
+    />
+    <ng-template *ngIf="!imageLoaded">
       <div class="loader">Loading...</div>
     </ng-template>
   </div>

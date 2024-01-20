@@ -13,6 +13,7 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "strict": true,
     "baseUrl": ".",
     "paths": {
       "@angular-enterprise-stack/forecast-fusion/data-access": [
@@ -26,6 +27,18 @@
       ],
       "@angular-enterprise-stack/forecast-fusion/feat-shell": [
         "libs/forecast-fusion/feat-shell/src/index.ts"
+      ],
+      "@angular-enterprise-stack/my-portfolio/data-access": [
+        "libs/my-portfolio/data-access/src/index.ts"
+      ],
+      "@angular-enterprise-stack/my-portfolio/shell": [
+        "libs/my-portfolio/shell/src/index.ts"
+      ],
+      "@angular-enterprise-stack/my-portfolio/types": [
+        "libs/my-portfolio/types/src/index.ts"
+      ],
+      "@angular-enterprise-stack/my-portfolio/ui": [
+        "libs/my-portfolio/ui/src/index.ts"
       ],
       "@angular-enterprise-stack/shared/angular": [
         "libs/shared/angular/src/index.ts"

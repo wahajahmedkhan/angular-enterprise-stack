@@ -341,6 +341,13 @@ module.exports = {
       },
     },
     {
+      files: ['test-setup.ts', 'polyfills.ts'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+        'import/no-unassigned-import': 'off',
+      },
+    },
+    {
       files: ['*.js', '*.jsx'],
       extends: ['plugin:@nx/javascript'],
       rules: {},

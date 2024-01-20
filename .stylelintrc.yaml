@@ -1,0 +1,55 @@
+extends:
+  - stylelint-config-standard-scss
+  - stylelint-config-idiomatic-order
+ignoreFiles:
+  - "*.js"
+  - "*.ts"
+plugins:
+  - stylelint-order
+rules:
+  alpha-value-notation: null
+  color-function-notation: "legacy"
+  declaration-block-no-redundant-longhand-properties: null
+  declaration-block-single-line-max-declarations: 0
+  font-family-no-missing-generic-family-keyword:
+    - true
+    - ignoreFontFamilies:
+        - "Material Icons"
+  font-family-name-quotes: always-unless-keyword
+  keyframes-name-pattern: null
+  no-descending-specificity: null
+  no-empty-source: null
+  selector-attribute-quotes: null
+  selector-class-pattern: null
+  selector-not-notation: null
+  selector-pseudo-element-no-unknown:
+    - true
+    - ignorePseudoElements:
+        - ng-deep
+        - host
+        - host-context
+  selector-type-no-unknown: #empty, since false is not allowed apparently
+  shorthand-property-no-redundant-values: null
+  value-keyword-case:
+    - "lower"
+    - ignoreKeywords:
+        - /A\d{2,3}/ # allow `A100` and the like for keys in the SCSS for material
+  scss/at-mixin-argumentless-call-parentheses: null
+  scss/at-rule-no-unknown:
+    - true
+    - ignoreAtRules:
+      - apply
+      - at-root
+      - each
+      - extend
+      - forward
+      - if
+      - include
+      - layer
+      - mixin
+      - responsive
+      - screen
+      - tailwind
+      - use
+      - variants
+  scss/double-slash-comment-whitespace-inside: null

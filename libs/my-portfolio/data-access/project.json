@@ -1,0 +1,21 @@
+{
+  "name": "my-portfolio-data-access",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/my-portfolio/data-access/src",
+  "prefix": "angular-enterprise-stack",
+  "tags": ["scope:my-portfolio", "type:data-access"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/my-portfolio/data-access/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  }
+}

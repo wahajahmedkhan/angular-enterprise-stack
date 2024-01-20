@@ -1,11 +1,11 @@
 <div class="toolbar">
   <div class="logo-container">
-    <img src="assets/userSyncLogo.webp" alt="App Logo" class="logo">
+    <img src="assets/userSyncLogo.webp" alt="App Logo" class="logo" />
     <span class="app-name">UserSyncTool</span>
   </div>
   <div class="navigation-buttons">
     <ng-container *ngFor="let route of routes">
-      <a [routerLink]="'/'+route" class="nav-btn" >{{route}}</a>
+      <a [routerLink]="'/' + route" class="nav-btn">{{ route }}</a>
     </ng-container>
   </div>
 </div>

@@ -2,10 +2,15 @@
   <h1>Forecast Fusion</h1>
 
   <div class="search-container">
-    <input type="text" placeholder="Enter city" (keyup)='changeSearch($any($event.target).value)' [value]='searchReadOnly()'  />
+    <input
+      type="text"
+      placeholder="Enter city"
+      (keyup)="changeSearch($any($event.target).value)"
+      [value]="searchReadOnly()"
+    />
     <button id="search-button" (click)="fetchForecast()">Search</button>
     <ul *ngIf="searchReadOnly().length > 0 && !ifCityExactMatch()">
-      <li *ngFor="let city of filterCities()"  (click)='changeSearch(city)'>
+      <li *ngFor="let city of filterCities()" (click)="changeSearch(city)">
         {{ city }}
       </li>
     </ul>

@@ -3,3 +3,7 @@
 /coverage
 /.nx/cache
 .angular
+
+
+# Ignore all SCSS files as Stylelint is taking care of them:
+*.scss

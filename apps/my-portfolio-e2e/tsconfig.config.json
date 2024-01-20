@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "allowJs": true,
+    "types": ["node", "playwright"],
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.js"],
+  "files": ["playwright.config.ts"]
+}

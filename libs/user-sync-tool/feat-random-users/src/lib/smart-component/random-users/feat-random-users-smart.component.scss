@@ -2,19 +2,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
   padding: 20px;
+  gap: 20px;
 }
 
-
 button {
+  padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  padding: 10px 15px;
+  margin-top: 10px;
   background-color: #008cba;
   color: white;
   cursor: pointer;
-  margin-top: 10px;
   transition: background-color 0.3s ease;
 
   &:hover {
@@ -22,14 +21,13 @@ button {
   }
 }
 
-
 .centered-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  gap: 10px;
   margin: 20px 0 0 0;
+  gap: 10px;
+  text-align: center;
 }
 
 .centered-toggle h3 {

@@ -1,5 +1,8 @@
 <div class="centered-toggle">
-  <h3>Enable random user fetching</h3><ust-toggle-switch-component (toggleChange)="toggleTimer($event)"></ust-toggle-switch-component>
+  <h3>Enable random user fetching</h3>
+  <ust-toggle-switch-component
+    (toggleChange)="toggleTimer($event)"
+  ></ust-toggle-switch-component>
 </div>
 <div class="user-list-container" [@listAnimation]="users().length">
   <div *ngFor="let user of users(); trackBy: trackById">

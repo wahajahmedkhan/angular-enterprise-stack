@@ -1,14 +1,15 @@
 header {
-  background-color: #008CBA;
   padding: 20px;
+  background-color: #008cba;
   text-align: center;
 }
 
-header input, header button {
+header input,
+header button {
   padding: 10px;
-  margin: 5px;
   border: none;
   border-radius: 5px;
+  margin: 5px;
 }
 
 header button {
@@ -17,25 +18,23 @@ header button {
 }
 
 h1 {
-  color: #fff;
   margin: 0;
+  color: #fff;
   font-size: 2.5em;
 }
 
-
 .search-container {
+  position: relative;
   display: flex;
   max-width: 600px;
   margin: auto;
-  position: relative;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .search-container input[type="text"] {
   flex-grow: 1;
   border-radius: 4px 0 0 4px; // Round only the left side
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .search-container button {
@@ -51,20 +50,22 @@ h1 {
   background-color: #16596f; // slightly darker on hover
 }
 
-
 .search-container ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
   position: absolute;
-  width: calc(100% - 100px); // Assuming the button is 100px wide, adjust as necessary
+  z-index: 1000;
   top: 100%; // Position it right below the input field
   left: 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 0 0 4px 4px;
-  z-index: 1000;
+  width: calc(
+    100% - 100px
+  ); // Assuming the button is 100px wide, adjust as necessary
+
   max-height: 200px;
+  padding: 0;
+  border-radius: 0 0 4px 4px;
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
   overflow-y: auto;
 }
 

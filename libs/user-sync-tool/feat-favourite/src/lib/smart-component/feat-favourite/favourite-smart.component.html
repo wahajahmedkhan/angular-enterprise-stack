@@ -5,7 +5,7 @@
       <button (click)="removeFromFavourites(user.id)">Remove</button>
     </ust-user-card>
   </div>
-  <ng-container *ngIf = "favourite().length === 0">
+  <ng-container *ngIf="favourite().length === 0">
     <h2>No favorite has been selected</h2>
   </ng-container>
 </div>
