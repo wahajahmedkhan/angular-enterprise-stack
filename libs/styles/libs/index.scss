@@ -1,0 +1,6 @@
+@import 'colors';
+
+
+@mixin init-styles() {
+  @include init-colors;
+}

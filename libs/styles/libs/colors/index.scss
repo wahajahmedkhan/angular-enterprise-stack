@@ -1,0 +1,8 @@
+@use "default" as default-colors;
+
+
+
+
+@mixin init-colors() {
+  @include default-colors.init-colors-default;
+}

@@ -1,0 +1,57 @@
+// Primary Colors
+$color-primary: #28e98c;
+$color-primary-dark: #1e704d;
+$color-primary-light: #5fe4a9;
+
+// Secondary Colors
+$color-secondary: #e4af12;
+$color-secondary-dark: #a17c0c;
+$color-secondary-light: #e6c043;
+
+// Neutral Colors
+$color-white: #fff;
+$color-black: #000;
+$color-grey: #999;
+$color-light-grey: #ccc;
+$color-dark-grey: #333;
+
+// Additional Colors
+$color-info: #14c5fd;
+$color-success: #c0c0c0;
+$color-warning: #fe6f1d;
+$color-danger: #f31313;
+$color-tertiary: #fe6f1d;
+$color-quaternary: #14c5fd;
+$color-quinary: #c0c0c0;
+$color-senary: #1338f3;
+$color-septenary: #f31313;
+$color-octonary: #f9c;
+$color-novenary: #cceb00;
+
+
+
+@mixin init-colors-default {
+  --portfolio-color-primary: #{$color-primary};
+  --portfolio-color-primary-dark: #{$color-primary-dark};
+  --portfolio-color-primary-light: #{$color-primary-light};
+  --portfolio-color-secondary: #{$color-secondary};
+  --portfolio-color-secondary-dark: #{$color-secondary-dark};
+  --portfolio-color-secondary-light: #{$color-secondary-light};
+  --portfolio-color-white: #{$color-white};
+  --portfolio-color-black: #{$color-black};
+  --portfolio-color-grey: #{$color-grey};
+  --portfolio-color-light-grey: #{$color-light-grey};
+  --portfolio-color-dark-grey: #{$color-dark-grey};
+  --portfolio-color-info: #{$color-info};
+  --portfolio-color-success: #{$color-success};
+  --portfolio-color-warning: #{$color-warning};
+  --portfolio-color-danger: #{$color-danger};
+  --portfolio-color-tertiary: #{$color-tertiary};
+  --portfolio-color-quaternary: #{$color-quaternary};
+  --portfolio-color-quinary: #{$color-quinary};
+  --portfolio-color-senary: #{$color-senary};
+  --portfolio-color-septenary: #{$color-septenary};
+  --portfolio-color-octonary: #{$color-octonary};
+  --portfolio-color-novenary: #{$color-novenary};
+  --portfolio-color-gray: #{$color-grey};
+}

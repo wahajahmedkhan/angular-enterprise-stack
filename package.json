@@ -9,7 +9,8 @@
     "build-forecast-fusion-prod": "nx run forecast-fusion:build:production",
     "serve-user-sync-tool-dev": "nx run user-sync-tool:serve:development",
     "serve-user-sync-tool-prod": "nx run user-sync-tool:serve:production",
-    "build-user-sync-tool-prod": "nx run user-sync-tool:build:production"
+    "build-user-sync-tool-prod": "nx run user-sync-tool:build:production",
+    "symlink-styles-lib": "node -e \"if (process.env.SKIP_SYMLINK_STYLES_LIB !== '1'){process.exit(1)}\" || ts-node tools/scripts/symlink-ui-styles-lib.ts"
   },
   "private": true,
   "dependencies": {
